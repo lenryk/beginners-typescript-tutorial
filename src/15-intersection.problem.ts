@@ -14,7 +14,9 @@ interface Post {
  * How do we type this return statement so it's both
  * User AND { posts: Post[] }
  */
-export const getDefaultUserAndPosts = (): unknown => {
+// we change the return type to User & { posts: Post[] }
+// this combines both the User and our inline object that is an array of posts together
+export const getDefaultUserAndPosts = (): User & { posts: Post[] } => {
   return {
     id: "1",
     firstName: "Matt",
