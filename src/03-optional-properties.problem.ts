@@ -1,6 +1,7 @@
 import { expect, it } from "vitest";
 
-export const getName = (params: { first: string; last: string }) => {
+// make any parameter optional by adding ? after the property name
+export const getName = (params: { first: string; last?: string }) => {
   if (params.last) {
     return `${params.first} ${params.last}`;
   }
