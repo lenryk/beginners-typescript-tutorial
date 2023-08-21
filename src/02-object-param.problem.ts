@@ -1,6 +1,13 @@
 import { expect, it } from "vitest";
 
-export const addTwoNumbers = (params) => {
+// example of extracting our types into an interface
+interface AddTwoNumbers {
+  first: number
+  second: number
+}
+
+// we can add inline type annotations or pull them out into an interface / type instead
+export const addTwoNumbers = (params: {first: number, second: number}) => {
   return params.first + params.second;
 };
 
