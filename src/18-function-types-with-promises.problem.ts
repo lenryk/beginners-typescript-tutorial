@@ -7,8 +7,11 @@ interface User {
 }
 
 const createThenGetUser = async (
-  createUser: unknown,
-  getUser: unknown,
+  // we use function types to say the function returns a promise of a string
+  // async function = returns promise
+  createUser: () => Promise<string>,
+  // the other function returns a promise of User
+  getUser: (id: string) => Promise<User>,
 ): Promise<User> => {
   const userId: string = await createUser();
 
