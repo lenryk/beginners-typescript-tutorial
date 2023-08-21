@@ -1,7 +1,9 @@
 import { expect, it } from "vitest";
 
 const createCache = () => {
-  const cache = {};
+  // we need to add a Record type to define what the cache will be without hard coding the props
+  // same as [prop: string]: string
+  const cache: Record<string, string> = {};
 
   const add = (id: string, value: string) => {
     cache[id] = value;
