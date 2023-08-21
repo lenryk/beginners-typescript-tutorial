@@ -11,7 +11,13 @@ interface User {
  * How do we ensure that defaultUser is of type User
  * at THIS LINE - not further down in the code?
  */
-const defaultUser = {};
+// we assign the User interface to our variable
+const defaultUser: User = {
+  id: 5,
+  firstName: "Jeff",
+  lastName: "Chef",
+  isAdmin: true
+};
 
 const getUserId = (user: User) => {
   return user.id;
