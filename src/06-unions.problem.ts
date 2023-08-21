@@ -8,7 +8,8 @@ interface User {
    * - 'user'
    * - 'super-admin'
    */
-  role: string;
+  // we can use literal unions to define exactly which values are allowed for this property
+  role: "admin" | "user" | "super-admin";
 }
 
 export const defaultUser: User = {
